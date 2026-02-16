@@ -1,0 +1,21 @@
+{
+  "name": "shnaim",
+  "version": "1.0.0",
+  "description": "Here are more detailed, step-by-step instructions to create your EPUB ebook titled **אחד מקרא ואחד תרגום** (Hebrew Tanakh + Targum Onkelos, verse-by-verse, limited to the Torah / Chumash). The process relies on Sefaria.org for sourcing the texts (public domain editions with nikud/ta'amim for Hebrew and proper Aramaic/Hebrew script for Onkelos), then structuring and converting to EPUB.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "gematriya": "^2.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/gematriya": "^2.0.5",
+    "@types/node": "^25.2.3"
+  }
+}
