@@ -10,6 +10,13 @@ const outputFilePath = path.join(__dirname, "shnaim.html");
 const Books = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"];
 const bookTitles = ["בראשית", "שמות", "ויקרא", "במדבר", "דברים"];
 const AliyotNames = ["", "ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שביעי", "מפטיר"];
+const parshiot = [
+  ["בראשית", "נח", "לך לך", "וירא", "חיי שרה", "תולדות", "ויצא", "וישלח", "וישב", "מקץ", "ויחי"],
+  ["שמות", "וארא", "בא", "בשלח", "יתרו", "משפטים", "תרומה", "תצוה", "כי תשא", "ויקהל", "פקודי"],
+  ["ויקרא", "צו", "שמיני", "תזריע", "מצורע", "אחרי מות", "קדושים", "אמור", "בהר", "בחוקותי"],
+  ["במדבר", "נשא", "בהעלותך", "שלח", "קרח", "קרח", "חוקת", "בלק", "פנחס", "מטות", "מסעי"],
+  ["דברים", "ואתחנן", "עקב", "ראה", "שופטים", "כי תצא", "כי תבוא", "ניצבים", "וילך", "האזינו", "וזאת הברכה"]
+];
 var aliyot: Aliyah[] = [];
 
 type Chapter = string[];
@@ -24,8 +31,9 @@ type Aliyah = {
   booknum: number;
   parsha: string;
   aliyah: number;
-  perek: number;
-  pasuk: number;
+  aliyah2: number;
+  chapter: number;
+  verse: number;
 }
 
 function readBook(book: string, title: string): Book {
@@ -55,19 +63,23 @@ function readAliyot(): any {
 }
 
 function getAliyah(booknum: number, chapter: number, verse: number): Aliyah | null {
-  return aliyot.find((aliyah) => aliyah.booknum === booknum + 1 && aliyah.perek === chapter + 1 && aliyah.pasuk === verse + 1) || null;
+  return aliyot.find((aliyah) => aliyah.booknum === booknum + 1 && aliyah.chapter === chapter + 1 && aliyah.verse === verse + 1) || null;
 }
 
 function printParsha(booknum: number, chapter: number, verse: number): void {
   const aliyah = getAliyah(booknum, chapter, verse);
-  if (aliyah?.aliyah === 1)
+  if (aliyah?.aliyah === 1) {
     print(`<h2 id="parsha.${aliyah.parsha}">${aliyah.parsha}</h2>`);
+    AliyotNames.forEach( (aliyahName, aliyahIndex) => {
+        print(`<a href="#aliyah.${aliyah.parsha}.${aliyahIndex}">${aliyahName}</a>`);
+    });
+  }
 }
 
 function printAliyah(booknum: number, chapter: number, verse: number): void {
   const aliyah = getAliyah(booknum, chapter, verse);
   if (aliyah)
-    print(`<h3 id="aliyah.${aliyah.parsha}.${aliyah.aliyah}">${AliyotNames[aliyah.aliyah]}</h3>`);
+    print(`<h3 id="aliyah.${aliyah.parsha}.${aliyah.aliyah}">${AliyotNames[aliyah.aliyah]}${aliyah.aliyah2 ? " (" + AliyotNames[aliyah.aliyah2] + ")" : ""}</h3>`);
 }
 
 function printVerse(booknum: number, chapterIndex: number, verseIndex: number, chumashVerse: string, onkelosVerse: string): void {
@@ -90,6 +102,9 @@ function printChapter(booknum: number, chapterIndex: number, chumashChapter: Cha
 }
 function printBook(title: string, booknum: number, chumashChapters: Chapter[], onkelosChapters: Chapter[]): void {
   print(`<h1 id="book.${title}">${title}</h1>`);
+  parshiot[booknum].forEach((parshaname) => {
+    print(`<a href="#parsha.${parshaname}">${parshaname}</a>`);
+  })
   chumashChapters.forEach((chumashChapter, chapterIndex) => {
     var onkelosChapter = onkelosChapters[chapterIndex];
     printChapter(booknum, chapterIndex, chumashChapter, onkelosChapter);
@@ -104,11 +119,14 @@ aliyot = readAliyot();
 print('<!DOCTYPE html>');
 print('<html>');
 print('<head>');
-print('  <link rel="stylesheet" href="shnaim.css">');
+print('  <link rel="stylesheet" href="styles.css">');
 print('</head>');
 print('<body>');
 print(`  <div dir="rtl" lang="he">`);
 const books = Books.map((book, index) => readBook(book, bookTitles[index]));
+books.forEach((book) => {
+  print(`<a href="#book.${book.title}">${book.title}</a>`);
+})
 books.forEach((book, bookindex) => {
   printBook(book.title, bookindex, book.chumash, book.onkelos);
 })
