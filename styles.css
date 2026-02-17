@@ -1,1 +1,19 @@
-body {font-family: 'David', 'Ezra SIL', serif; direction: rtl; text-align: right;}
+
+
+body {font-family: 'David', serif; direction: rtl; text-align: right;}
+
+.chapter {
+  font-weight: bold;
+  font-size: 150%;
+  margin-top: 1em;
+}
+
+.verse-number {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.onkelos {
+  font-weight: normal;
+  font-style: italic;
+}

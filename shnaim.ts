@@ -86,15 +86,19 @@ function printVerse(booknum: number, chapterIndex: number, verseIndex: number, c
   printParsha(booknum, chapterIndex, verseIndex);
   printAliyah(booknum, chapterIndex, verseIndex);
 
+  const chumashSplit = chumashVerse.match(/^([\s\S]*?)(&nbsp;.*$|$)/);
+
   print(`<span class="verse">`);
   print(`<span class="verse-number">${gematriya(verseIndex + 1)}.</span>`);
-  print(`<span class="chumash">${chumashVerse}</span>`);
+  print(`<span class="chumash">${chumashSplit ? chumashSplit[1] : ""}</span>`);
   print(`<span class="onkelos">${onkelosVerse}</span>`);
+  if (chumashSplit && chumashSplit[2])
+    print(`<span class="chumash-trail">${chumashSplit[2]}</span>`);
   print(`</span>`);
 }
 
 function printChapter(booknum: number, chapterIndex: number, chumashChapter: Chapter, onkelosChapter: Chapter): void {
-  print(`<h4>פרק ${gematriya(chapterIndex + 1)}</h2>`);
+  print(`<span class="chapter">פרק ${gematriya(chapterIndex + 1)}</span>`);
   chumashChapter.forEach((chumashVerse, verseIndex) => {
     var onkelosVerse = onkelosChapter[verseIndex];
     printVerse(booknum, chapterIndex, verseIndex, chumashVerse, onkelosVerse);
