@@ -6,7 +6,7 @@ import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const outputFilePath = path.join(__dirname, "shnaim.html");
+const outputFilePath = path.join(__dirname, "אחד מקרא אחד תרגום.html");
 const Books = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"];
 const bookTitles = ["בראשית", "שמות", "ויקרא", "במדבר", "דברים"];
 const AliyotNames = ["", "ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שביעי", "מפטיר"];
@@ -71,7 +71,7 @@ function printParsha(booknum: number, chapter: number, verse: number): void {
   if (aliyah?.aliyah === 1) {
     print(`<h2 id="parsha.${aliyah.parsha}">${aliyah.parsha}</h2>`);
     AliyotNames.forEach( (aliyahName, aliyahIndex) => {
-        print(`<a href="#aliyah.${aliyah.parsha}.${aliyahIndex}">${aliyahName}</a>`);
+        aliyahIndex <= 7 && print(`<a href="#aliyah.${aliyah.parsha}.${aliyahIndex}">${aliyahName}</a>`);
     });
   }
 }
@@ -82,10 +82,7 @@ function printAliyah(booknum: number, chapter: number, verse: number): void {
     print(`<h3 id="aliyah.${aliyah.parsha}.${aliyah.aliyah}">${AliyotNames[aliyah.aliyah]}${aliyah.aliyah2 ? " (" + AliyotNames[aliyah.aliyah2] + ")" : ""}</h3>`);
 }
 
-function printVerse(booknum: number, chapterIndex: number, verseIndex: number, chumashVerse: string, onkelosVerse: string): void {
-  printParsha(booknum, chapterIndex, verseIndex);
-  printAliyah(booknum, chapterIndex, verseIndex);
-
+function printVerse(verseIndex: number, chumashVerse: string, onkelosVerse: string): void {
   const chumashSplit = chumashVerse.match(/^([\s\S]*?)(&nbsp;.*$|$)/);
 
   print(`<span class="verse">`);
@@ -98,10 +95,13 @@ function printVerse(booknum: number, chapterIndex: number, verseIndex: number, c
 }
 
 function printChapter(booknum: number, chapterIndex: number, chumashChapter: Chapter, onkelosChapter: Chapter): void {
-  print(`<span class="chapter">פרק ${gematriya(chapterIndex + 1)}</span>`);
   chumashChapter.forEach((chumashVerse, verseIndex) => {
+    printParsha(booknum, chapterIndex, verseIndex);
+    printAliyah(booknum, chapterIndex, verseIndex);
+    if (verseIndex === 0)
+      print(`<span class="chapter">[פרק ${gematriya(chapterIndex + 1)}]</span>`);
     var onkelosVerse = onkelosChapter[verseIndex];
-    printVerse(booknum, chapterIndex, verseIndex, chumashVerse, onkelosVerse);
+    printVerse(verseIndex, chumashVerse, onkelosVerse);
   });
 }
 function printBook(title: string, booknum: number, chumashChapters: Chapter[], onkelosChapters: Chapter[]): void {
@@ -123,10 +123,13 @@ aliyot = readAliyot();
 print('<!DOCTYPE html>');
 print('<html>');
 print('<head>');
-print('  <link rel="stylesheet" href="styles.css">');
+print('<title>אחד מקרא אחד תרגום</title>');
+print('<style>');
+print(fs.readFileSync(path.join(__dirname, "src", "styles.css"), "utf-8"));
+print('</style>');
 print('</head>');
 print('<body>');
-print(`  <div dir="rtl" lang="he">`);
+print(`<div dir="rtl" lang="he">`);
 const books = Books.map((book, index) => readBook(book, bookTitles[index]));
 books.forEach((book) => {
   print(`<a href="#book.${book.title}">${book.title}</a>`);
@@ -134,6 +137,6 @@ books.forEach((book) => {
 books.forEach((book, bookindex) => {
   printBook(book.title, bookindex, book.chumash, book.onkelos);
 })
-print(`  </div>`);
+print(`</div>`);
 print('</body>');
 print('</html>');
