@@ -92,14 +92,6 @@
     "booknum": 1,
     "parsha": "נח",
     "aliyah": 5,
-    "chapter": 8,
-    "verse": 22
-  },
-  {
-    "book": "בראשית",
-    "booknum": 1,
-    "parsha": "נח",
-    "aliyah": 6,
     "chapter": 9,
     "verse": 8
   },
@@ -107,9 +99,17 @@
     "book": "בראשית",
     "booknum": 1,
     "parsha": "נח",
-    "aliyah": 7,
+    "aliyah": 6,
     "chapter": 9,
     "verse": 18
+  },
+  {
+    "book": "בראשית",
+    "booknum": 1,
+    "parsha": "נח",
+    "aliyah": 7,
+    "chapter": 11,
+    "verse": 1
   },
   {
     "book": "בראשית",
@@ -164,8 +164,8 @@
     "booknum": 1,
     "parsha": "לך לך",
     "aliyah": 7,
-    "chapter": 16,
-    "verse": 1
+    "chapter": 17,
+    "verse": 7
   },
   {
     "book": "בראשית",
@@ -204,8 +204,8 @@
     "booknum": 1,
     "parsha": "וירא",
     "aliyah": 5,
-    "chapter": 20,
-    "verse": 1
+    "chapter": 21,
+    "verse": 5
   },
   {
     "book": "בראשית",
@@ -213,15 +213,15 @@
     "parsha": "וירא",
     "aliyah": 6,
     "chapter": 21,
-    "verse": 1
+    "verse": 22
   },
   {
     "book": "בראשית",
     "booknum": 1,
     "parsha": "וירא",
     "aliyah": 7,
-    "chapter": 21,
-    "verse": 22
+    "chapter": 22,
+    "verse": 1
   },
   {
     "book": "בראשית",
@@ -261,15 +261,15 @@
     "parsha": "חיי שרה",
     "aliyah": 5,
     "chapter": 24,
-    "verse": 50
+    "verse": 53
   },
   {
     "book": "בראשית",
     "booknum": 1,
     "parsha": "חיי שרה",
     "aliyah": 6,
-    "chapter": 24,
-    "verse": 54
+    "chapter": 25,
+    "verse": 1
   },
   {
     "book": "בראשית",
@@ -277,7 +277,7 @@
     "parsha": "חיי שרה",
     "aliyah": 7,
     "chapter": 25,
-    "verse": 1
+    "verse": 12
   },
   {
     "book": "בראשית",
@@ -325,15 +325,15 @@
     "parsha": "תולדות",
     "aliyah": 6,
     "chapter": 27,
-    "verse": 1
+    "verse": 28
   },
   {
     "book": "בראשית",
     "booknum": 1,
     "parsha": "תולדות",
     "aliyah": 7,
-    "chapter": 27,
-    "verse": 28
+    "chapter": 28,
+    "verse": 5
   },
   {
     "book": "בראשית",
@@ -364,14 +364,6 @@
     "booknum": 1,
     "parsha": "ויצא",
     "aliyah": 4,
-    "chapter": 29,
-    "verse": 31
-  },
-  {
-    "book": "בראשית",
-    "booknum": 1,
-    "parsha": "ויצא",
-    "aliyah": 5,
     "chapter": 30,
     "verse": 14
   },
@@ -379,9 +371,17 @@
     "book": "בראשית",
     "booknum": 1,
     "parsha": "ויצא",
-    "aliyah": 6,
+    "aliyah": 5,
     "chapter": 30,
-    "verse": 22
+    "verse": 28
+  },
+  {
+    "book": "בראשית",
+    "booknum": 1,
+    "parsha": "ויצא",
+    "aliyah": 6,
+    "chapter": 31,
+    "verse": 17
   },
   {
     "book": "בראשית",
@@ -389,7 +389,7 @@
     "parsha": "ויצא",
     "aliyah": 7,
     "chapter": 31,
-    "verse": 17
+    "verse": 43
   },
   {
     "book": "בראשית",
@@ -421,14 +421,14 @@
     "parsha": "וישלח",
     "aliyah": 4,
     "chapter": 33,
-    "verse": 18
+    "verse": 6
   },
   {
     "book": "בראשית",
     "booknum": 1,
     "parsha": "וישלח",
     "aliyah": 5,
-    "chapter": 35,
+    "chapter": 34,
     "verse": 1
   },
   {
@@ -437,7 +437,7 @@
     "parsha": "וישלח",
     "aliyah": 6,
     "chapter": 35,
-    "verse": 16
+    "verse": 12
   },
   {
     "book": "בראשית",
@@ -445,7 +445,7 @@
     "parsha": "וישלח",
     "aliyah": 7,
     "chapter": 36,
-    "verse": 1
+    "verse": 20
   },
   {
     "book": "בראשית",
@@ -541,7 +541,7 @@
     "parsha": "מקץ",
     "aliyah": 5,
     "chapter": 42,
-    "verse": 18
+    "verse": 19
   },
   {
     "book": "בראשית",
@@ -549,7 +549,7 @@
     "parsha": "מקץ",
     "aliyah": 6,
     "chapter": 43,
-    "verse": 1
+    "verse": 16
   },
   {
     "book": "בראשית",
@@ -557,7 +557,7 @@
     "parsha": "מקץ",
     "aliyah": 7,
     "chapter": 43,
-    "verse": 15
+    "verse": 30
   },
   {
     "book": "בראשית",
@@ -596,8 +596,8 @@
     "booknum": 1,
     "parsha": "ויגש",
     "aliyah": 5,
-    "chapter": 46,
-    "verse": 1
+    "chapter": 45,
+    "verse": 28
   },
   {
     "book": "בראשית",
@@ -669,7 +669,7 @@
     "parsha": "ויחי",
     "aliyah": 7,
     "chapter": 50,
-    "verse": 1
+    "verse": 21
   },
   {
     "book": "שמות",
@@ -748,8 +748,8 @@
     "booknum": 2,
     "parsha": "וארא",
     "aliyah": 3,
-    "chapter": 7,
-    "verse": 8
+    "chapter": 6,
+    "verse": 29
   },
   {
     "book": "שמות",
@@ -757,7 +757,7 @@
     "parsha": "וארא",
     "aliyah": 4,
     "chapter": 7,
-    "verse": 26
+    "verse": 8
   },
   {
     "book": "שמות",
@@ -765,7 +765,7 @@
     "parsha": "וארא",
     "aliyah": 5,
     "chapter": 8,
-    "verse": 12
+    "verse": 7
   },
   {
     "book": "שמות",
@@ -773,7 +773,7 @@
     "parsha": "וארא",
     "aliyah": 6,
     "chapter": 8,
-    "verse": 21
+    "verse": 19
   },
   {
     "book": "שמות",
@@ -781,7 +781,7 @@
     "parsha": "וארא",
     "aliyah": 7,
     "chapter": 9,
-    "verse": 8
+    "verse": 17
   },
   {
     "book": "שמות",
@@ -949,7 +949,7 @@
     "parsha": "יתרו",
     "aliyah": 7,
     "chapter": 20,
-    "verse": 18
+    "verse": 15
   },
   {
     "book": "שמות",
@@ -1004,8 +1004,8 @@
     "booknum": 2,
     "parsha": "משפטים",
     "aliyah": 7,
-    "chapter": 24,
-    "verse": 1
+    "chapter": 23,
+    "verse": 26
   },
   {
     "book": "שמות",
@@ -1132,22 +1132,6 @@
     "booknum": 2,
     "parsha": "כי תשא",
     "aliyah": 2,
-    "chapter": 30,
-    "verse": 17
-  },
-  {
-    "book": "שמות",
-    "booknum": 2,
-    "parsha": "כי תשא",
-    "aliyah": 3,
-    "chapter": 31,
-    "verse": 1
-  },
-  {
-    "book": "שמות",
-    "booknum": 2,
-    "parsha": "כי תשא",
-    "aliyah": 4,
     "chapter": 31,
     "verse": 18
   },
@@ -1155,25 +1139,41 @@
     "book": "שמות",
     "booknum": 2,
     "parsha": "כי תשא",
-    "aliyah": 5,
-    "chapter": 32,
-    "verse": 15
+    "aliyah": 3,
+    "chapter": 33,
+    "verse": 12
   },
   {
     "book": "שמות",
     "booknum": 2,
     "parsha": "כי תשא",
-    "aliyah": 6,
+    "aliyah": 4,
     "chapter": 33,
+    "verse": 17
+  },
+  {
+    "book": "שמות",
+    "booknum": 2,
+    "parsha": "כי תשא",
+    "aliyah": 5,
+    "chapter": 34,
     "verse": 1
   },
   {
     "book": "שמות",
     "booknum": 2,
     "parsha": "כי תשא",
+    "aliyah": 6,
+    "chapter": 34,
+    "verse": 10
+  },
+  {
+    "book": "שמות",
+    "booknum": 2,
+    "parsha": "כי תשא",
     "aliyah": 7,
-    "chapter": 33,
-    "verse": 12
+    "chapter": 34,
+    "verse": 27
   },
   {
     "book": "שמות",
@@ -1206,15 +1206,15 @@
     "parsha": "ויקהל",
     "aliyah": 4,
     "chapter": 36,
-    "verse": 20
+    "verse": 8
   },
   {
     "book": "שמות",
     "booknum": 2,
     "parsha": "ויקהל",
     "aliyah": 5,
-    "chapter": 37,
-    "verse": 1
+    "chapter": 36,
+    "verse": 20
   },
   {
     "book": "שמות",
@@ -1223,7 +1223,7 @@
     "aliyah": 6,
     "aliyah2": 3,
     "chapter": 37,
-    "verse": 10
+    "verse": 17
   },
   {
     "book": "שמות",
@@ -1231,16 +1231,8 @@
     "parsha": "ויקהל",
     "aliyah": 7,
     "aliyah2": 4,
-    "chapter": 37,
-    "verse": 25
-  },
-  {
-    "book": "שמות",
-    "booknum": 2,
-    "parsha": "ויקהל",
-    "aliyah": 8,
     "chapter": 38,
-    "verse": 18
+    "verse": 1
   },
   {
     "book": "שמות",
@@ -1274,7 +1266,7 @@
     "parsha": "פקודי",
     "aliyah": 4,
     "chapter": 39,
-    "verse": 32
+    "verse": 33
   },
   {
     "book": "שמות",
@@ -1302,14 +1294,6 @@
     "verse": 28
   },
   {
-    "book": "שמות",
-    "booknum": 2,
-    "parsha": "פקודי",
-    "aliyah": 8,
-    "chapter": 40,
-    "verse": 34
-  },
-  {
     "book": "ויקרא",
     "booknum": 3,
     "parsha": "ויקרא",
@@ -1322,6 +1306,22 @@
     "booknum": 3,
     "parsha": "ויקרא",
     "aliyah": 2,
+    "chapter": 1,
+    "verse": 14
+  },
+  {
+    "book": "ויקרא",
+    "booknum": 3,
+    "parsha": "ויקרא",
+    "aliyah": 3,
+    "chapter": 2,
+    "verse": 7
+  },
+  {
+    "book": "ויקרא",
+    "booknum": 3,
+    "parsha": "ויקרא",
+    "aliyah": 4,
     "chapter": 3,
     "verse": 1
   },
@@ -1329,7 +1329,7 @@
     "book": "ויקרא",
     "booknum": 3,
     "parsha": "ויקרא",
-    "aliyah": 3,
+    "aliyah": 5,
     "chapter": 4,
     "verse": 1
   },
@@ -1337,7 +1337,7 @@
     "book": "ויקרא",
     "booknum": 3,
     "parsha": "ויקרא",
-    "aliyah": 4,
+    "aliyah": 6,
     "chapter": 4,
     "verse": 27
   },
@@ -1345,25 +1345,9 @@
     "book": "ויקרא",
     "booknum": 3,
     "parsha": "ויקרא",
-    "aliyah": 5,
+    "aliyah": 7,
     "chapter": 5,
     "verse": 11
-  },
-  {
-    "book": "ויקרא",
-    "booknum": 3,
-    "parsha": "ויקרא",
-    "aliyah": 6,
-    "chapter": 6,
-    "verse": 1
-  },
-  {
-    "book": "ויקרא",
-    "booknum": 3,
-    "parsha": "ויקרא",
-    "aliyah": 7,
-    "chapter": 6,
-    "verse": 12
   },
   {
     "book": "ויקרא",
@@ -1387,7 +1371,7 @@
     "parsha": "צו",
     "aliyah": 3,
     "chapter": 7,
-    "verse": 19
+    "verse": 11
   },
   {
     "book": "ויקרא",
@@ -1403,7 +1387,7 @@
     "parsha": "צו",
     "aliyah": 5,
     "chapter": 8,
-    "verse": 17
+    "verse": 14
   },
   {
     "book": "ויקרא",
@@ -1411,7 +1395,7 @@
     "parsha": "צו",
     "aliyah": 6,
     "chapter": 8,
-    "verse": 27
+    "verse": 22
   },
   {
     "book": "ויקרא",
@@ -1419,7 +1403,7 @@
     "parsha": "צו",
     "aliyah": 7,
     "chapter": 8,
-    "verse": 36
+    "verse": 30
   },
   {
     "book": "ויקרא",
@@ -1435,7 +1419,7 @@
     "parsha": "שמיני",
     "aliyah": 2,
     "chapter": 9,
-    "verse": 8
+    "verse": 17
   },
   {
     "book": "ויקרא",
@@ -1443,7 +1427,7 @@
     "parsha": "שמיני",
     "aliyah": 3,
     "chapter": 9,
-    "verse": 22
+    "verse": 24
   },
   {
     "book": "ויקרא",
@@ -1451,7 +1435,7 @@
     "parsha": "שמיני",
     "aliyah": 4,
     "chapter": 10,
-    "verse": 8
+    "verse": 12
   },
   {
     "book": "ויקרא",
@@ -1459,15 +1443,15 @@
     "parsha": "שמיני",
     "aliyah": 5,
     "chapter": 10,
-    "verse": 12
+    "verse": 16
   },
   {
     "book": "ויקרא",
     "booknum": 3,
     "parsha": "שמיני",
     "aliyah": 6,
-    "chapter": 10,
-    "verse": 16
+    "chapter": 11,
+    "verse": 1
   },
   {
     "book": "ויקרא",
@@ -1475,7 +1459,7 @@
     "parsha": "שמיני",
     "aliyah": 7,
     "chapter": 11,
-    "verse": 21
+    "verse": 33
   },
   {
     "book": "ויקרא",
@@ -1491,7 +1475,7 @@
     "parsha": "תזריע",
     "aliyah": 2,
     "chapter": 13,
-    "verse": 1
+    "verse": 6
   },
   {
     "book": "ויקרא",
@@ -1499,7 +1483,7 @@
     "parsha": "תזריע",
     "aliyah": 3,
     "chapter": 13,
-    "verse": 9
+    "verse": 18
   },
   {
     "book": "ויקרא",
@@ -1508,7 +1492,7 @@
     "aliyah": 4,
     "aliyah2": 2,
     "chapter": 13,
-    "verse": 18
+    "verse": 24
   },
   {
     "book": "ויקרא",
@@ -1516,7 +1500,7 @@
     "parsha": "תזריע",
     "aliyah": 5,
     "chapter": 13,
-    "verse": 24
+    "verse": 29
   },
   {
     "book": "ויקרא",
@@ -1525,7 +1509,7 @@
     "aliyah": 6,
     "aliyah2": 3,
     "chapter": 13,
-    "verse": 29
+    "verse": 40
   },
   {
     "book": "ויקרא",
@@ -1534,7 +1518,7 @@
     "aliyah": 7,
     "aliyah2": 4,
     "chapter": 13,
-    "verse": 38
+    "verse": 55
   },
   {
     "book": "ויקרא",
@@ -1550,7 +1534,7 @@
     "parsha": "מצרע",
     "aliyah": 2,
     "chapter": 14,
-    "verse": 8
+    "verse": 13
   },
   {
     "book": "ויקרא",
@@ -1617,8 +1601,8 @@
     "parsha": "אחרי מות",
     "aliyah": 3,
     "aliyah2": 2,
-    "chapter": 17,
-    "verse": 1
+    "chapter": 16,
+    "verse": 25
   },
   {
     "book": "ויקרא",
@@ -1626,7 +1610,7 @@
     "parsha": "אחרי מות",
     "aliyah": 4,
     "chapter": 17,
-    "verse": 8
+    "verse": 1
   },
   {
     "book": "ויקרא",
@@ -1634,8 +1618,8 @@
     "parsha": "אחרי מות",
     "aliyah": 5,
     "aliyah2": 3,
-    "chapter": 18,
-    "verse": 1
+    "chapter": 17,
+    "verse": 8
   },
   {
     "book": "ויקרא",
@@ -1669,7 +1653,7 @@
     "aliyah": 2,
     "aliyah2": 5,
     "chapter": 19,
-    "verse": 11
+    "verse": 15
   },
   {
     "book": "ויקרא",
@@ -1677,7 +1661,7 @@
     "parsha": "קדושים",
     "aliyah": 3,
     "chapter": 19,
-    "verse": 19
+    "verse": 23
   },
   {
     "book": "ויקרא",
@@ -1686,15 +1670,15 @@
     "aliyah": 4,
     "aliyah2": 6,
     "chapter": 19,
-    "verse": 23
+    "verse": 33
   },
   {
     "book": "ויקרא",
     "booknum": 3,
     "parsha": "קדושים",
     "aliyah": 5,
-    "chapter": 19,
-    "verse": 31
+    "chapter": 20,
+    "verse": 1
   },
   {
     "book": "ויקרא",
@@ -1703,7 +1687,7 @@
     "aliyah": 6,
     "aliyah2": 7,
     "chapter": 20,
-    "verse": 1
+    "verse": 8
   },
   {
     "book": "ויקרא",
@@ -1711,7 +1695,7 @@
     "parsha": "קדושים",
     "aliyah": 7,
     "chapter": 20,
-    "verse": 8
+    "verse": 23
   },
   {
     "book": "ויקרא",
@@ -1726,8 +1710,8 @@
     "booknum": 3,
     "parsha": "אמר",
     "aliyah": 2,
-    "chapter": 22,
-    "verse": 3
+    "chapter": 21,
+    "verse": 16
   },
   {
     "book": "ויקרא",
@@ -1751,7 +1735,7 @@
     "parsha": "אמר",
     "aliyah": 5,
     "chapter": 23,
-    "verse": 9
+    "verse": 23
   },
   {
     "book": "ויקרא",
@@ -1759,7 +1743,7 @@
     "parsha": "אמר",
     "aliyah": 6,
     "chapter": 23,
-    "verse": 23
+    "verse": 33
   },
   {
     "book": "ויקרא",
@@ -1783,7 +1767,7 @@
     "parsha": "בהר",
     "aliyah": 2,
     "chapter": 25,
-    "verse": 8
+    "verse": 14
   },
   {
     "book": "ויקרא",
@@ -1792,7 +1776,7 @@
     "aliyah": 3,
     "aliyah2": 2,
     "chapter": 25,
-    "verse": 14
+    "verse": 19
   },
   {
     "book": "ויקרא",
@@ -1800,7 +1784,7 @@
     "parsha": "בהר",
     "aliyah": 4,
     "chapter": 25,
-    "verse": 19
+    "verse": 25
   },
   {
     "book": "ויקרא",
@@ -1809,7 +1793,7 @@
     "aliyah": 5,
     "aliyah2": 3,
     "chapter": 25,
-    "verse": 27
+    "verse": 29
   },
   {
     "book": "ויקרא",
@@ -1818,7 +1802,7 @@
     "aliyah": 6,
     "aliyah2": 4,
     "chapter": 25,
-    "verse": 35
+    "verse": 39
   },
   {
     "book": "ויקרא",
@@ -1826,7 +1810,7 @@
     "parsha": "בהר",
     "aliyah": 7,
     "chapter": 25,
-    "verse": 39
+    "verse": 47
   },
   {
     "book": "ויקרא",
@@ -1842,7 +1826,7 @@
     "parsha": "בחקתי",
     "aliyah": 2,
     "chapter": 26,
-    "verse": 14
+    "verse": 6
   },
   {
     "book": "ויקרא",
@@ -1851,7 +1835,7 @@
     "aliyah": 3,
     "aliyah2": 5,
     "chapter": 26,
-    "verse": 27
+    "verse": 10
   },
   {
     "book": "ויקרא",
@@ -1859,8 +1843,8 @@
     "parsha": "בחקתי",
     "aliyah": 4,
     "aliyah2": 6,
-    "chapter": 26,
-    "verse": 40
+    "chapter": 27,
+    "verse": 1
   },
   {
     "book": "ויקרא",
@@ -1869,7 +1853,7 @@
     "aliyah": 5,
     "aliyah2": 7,
     "chapter": 27,
-    "verse": 1
+    "verse": 16
   },
   {
     "book": "ויקרא",
@@ -1877,7 +1861,7 @@
     "parsha": "בחקתי",
     "aliyah": 6,
     "chapter": 27,
-    "verse": 9
+    "verse": 22
   },
   {
     "book": "ויקרא",
@@ -1885,7 +1869,7 @@
     "parsha": "בחקתי",
     "aliyah": 7,
     "chapter": 27,
-    "verse": 25
+    "verse": 29
   },
   {
     "book": "במדבר",
@@ -1901,7 +1885,7 @@
     "parsha": "במדבר",
     "aliyah": 2,
     "chapter": 1,
-    "verse": 16
+    "verse": 20
   },
   {
     "book": "במדבר",
@@ -1916,32 +1900,32 @@
     "booknum": 4,
     "parsha": "במדבר",
     "aliyah": 4,
-    "chapter": 2,
-    "verse": 10
+    "chapter": 3,
+    "verse": 1
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "במדבר",
     "aliyah": 5,
-    "chapter": 2,
-    "verse": 17
+    "chapter": 3,
+    "verse": 14
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "במדבר",
     "aliyah": 6,
-    "chapter": 2,
-    "verse": 32
+    "chapter": 3,
+    "verse": 40
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "במדבר",
     "aliyah": 7,
-    "chapter": 3,
-    "verse": 40
+    "chapter": 4,
+    "verse": 1
   },
   {
     "book": "במדבר",
@@ -1957,15 +1941,15 @@
     "parsha": "נשא",
     "aliyah": 2,
     "chapter": 4,
-    "verse": 29
+    "verse": 38
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "נשא",
     "aliyah": 3,
-    "chapter": 4,
-    "verse": 34
+    "chapter": 5,
+    "verse": 1
   },
   {
     "book": "במדבר",
@@ -1973,14 +1957,14 @@
     "parsha": "נשא",
     "aliyah": 4,
     "chapter": 5,
-    "verse": 5
+    "verse": 11
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "נשא",
     "aliyah": 5,
-    "chapter": 6,
+    "chapter": 7,
     "verse": 1
   },
   {
@@ -1988,8 +1972,8 @@
     "booknum": 4,
     "parsha": "נשא",
     "aliyah": 6,
-    "chapter": 6,
-    "verse": 22
+    "chapter": 7,
+    "verse": 42
   },
   {
     "book": "במדבר",
@@ -1997,7 +1981,7 @@
     "parsha": "נשא",
     "aliyah": 7,
     "chapter": 7,
-    "verse": 1
+    "verse": 72
   },
   {
     "book": "במדבר",
@@ -2069,7 +2053,7 @@
     "parsha": "שלח",
     "aliyah": 2,
     "chapter": 13,
-    "verse": 16
+    "verse": 21
   },
   {
     "book": "במדבר",
@@ -2077,7 +2061,7 @@
     "parsha": "שלח",
     "aliyah": 3,
     "chapter": 14,
-    "verse": 10
+    "verse": 8
   },
   {
     "book": "במדבר",
@@ -2085,7 +2069,7 @@
     "parsha": "שלח",
     "aliyah": 4,
     "chapter": 14,
-    "verse": 21
+    "verse": 26
   },
   {
     "book": "במדבר",
@@ -2093,7 +2077,7 @@
     "parsha": "שלח",
     "aliyah": 5,
     "chapter": 15,
-    "verse": 1
+    "verse": 8
   },
   {
     "book": "במדבר",
@@ -2101,7 +2085,7 @@
     "parsha": "שלח",
     "aliyah": 6,
     "chapter": 15,
-    "verse": 8
+    "verse": 17
   },
   {
     "book": "במדבר",
@@ -2125,7 +2109,7 @@
     "parsha": "קרח",
     "aliyah": 2,
     "chapter": 16,
-    "verse": 8
+    "verse": 14
   },
   {
     "book": "במדבר",
@@ -2140,8 +2124,8 @@
     "booknum": 4,
     "parsha": "קרח",
     "aliyah": 4,
-    "chapter": 16,
-    "verse": 36
+    "chapter": 17,
+    "verse": 9
   },
   {
     "book": "במדבר",
@@ -2156,8 +2140,8 @@
     "booknum": 4,
     "parsha": "קרח",
     "aliyah": 6,
-    "chapter": 18,
-    "verse": 1
+    "chapter": 17,
+    "verse": 25
   },
   {
     "book": "במדבר",
@@ -2165,7 +2149,7 @@
     "parsha": "קרח",
     "aliyah": 7,
     "chapter": 18,
-    "verse": 8
+    "verse": 21
   },
   {
     "book": "במדבר",
@@ -2180,8 +2164,8 @@
     "booknum": 4,
     "parsha": "חקת",
     "aliyah": 2,
-    "chapter": 20,
-    "verse": 1
+    "chapter": 19,
+    "verse": 18
   },
   {
     "book": "במדבר",
@@ -2190,7 +2174,7 @@
     "aliyah": 3,
     "aliyah2": 2,
     "chapter": 20,
-    "verse": 14
+    "verse": 7
   },
   {
     "book": "במדבר",
@@ -2198,7 +2182,7 @@
     "parsha": "חקת",
     "aliyah": 4,
     "chapter": 20,
-    "verse": 22
+    "verse": 14
   },
   {
     "book": "במדבר",
@@ -2206,8 +2190,8 @@
     "parsha": "חקת",
     "aliyah": 5,
     "aliyah2": 3,
-    "chapter": 21,
-    "verse": 10
+    "chapter": 20,
+    "verse": 22
   },
   {
     "book": "במדבר",
@@ -2215,7 +2199,7 @@
     "parsha": "חקת",
     "aliyah": 6,
     "chapter": 21,
-    "verse": 21
+    "verse": 10
   },
   {
     "book": "במדבר",
@@ -2223,8 +2207,8 @@
     "parsha": "חקת",
     "aliyah": 7,
     "aliyah2": 4,
-    "chapter": 22,
-    "verse": 1
+    "chapter": 21,
+    "verse": 21
   },
   {
     "book": "במדבר",
@@ -2241,7 +2225,7 @@
     "aliyah": 2,
     "aliyah2": 5,
     "chapter": 22,
-    "verse": 9
+    "verse": 13
   },
   {
     "book": "במדבר",
@@ -2250,15 +2234,15 @@
     "aliyah": 3,
     "aliyah2": 6,
     "chapter": 22,
-    "verse": 19
+    "verse": 21
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "בלק",
     "aliyah": 4,
-    "chapter": 23,
-    "verse": 13
+    "chapter": 22,
+    "verse": 39
   },
   {
     "book": "במדבר",
@@ -2266,7 +2250,7 @@
     "parsha": "בלק",
     "aliyah": 5,
     "chapter": 23,
-    "verse": 27
+    "verse": 13
   },
   {
     "book": "במדבר",
@@ -2274,16 +2258,16 @@
     "parsha": "בלק",
     "aliyah": 6,
     "aliyah2": 7,
-    "chapter": 24,
-    "verse": 12
+    "chapter": 23,
+    "verse": 27
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "בלק",
     "aliyah": 7,
-    "chapter": 25,
-    "verse": 1
+    "chapter": 24,
+    "verse": 14
   },
   {
     "book": "במדבר",
@@ -2307,21 +2291,13 @@
     "parsha": "פינחס",
     "aliyah": 3,
     "chapter": 26,
-    "verse": 12
-  },
-  {
-    "book": "במדבר",
-    "booknum": 4,
-    "parsha": "פינחס",
-    "aliyah": 4,
-    "chapter": 26,
     "verse": 52
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "פינחס",
-    "aliyah": 5,
+    "aliyah": 4,
     "chapter": 27,
     "verse": 6
   },
@@ -2329,7 +2305,7 @@
     "book": "במדבר",
     "booknum": 4,
     "parsha": "פינחס",
-    "aliyah": 6,
+    "aliyah": 5,
     "chapter": 28,
     "verse": 1
   },
@@ -2337,9 +2313,17 @@
     "book": "במדבר",
     "booknum": 4,
     "parsha": "פינחס",
-    "aliyah": 7,
+    "aliyah": 6,
     "chapter": 28,
-    "verse": 9
+    "verse": 16
+  },
+  {
+    "book": "במדבר",
+    "booknum": 4,
+    "parsha": "פינחס",
+    "aliyah": 7,
+    "chapter": 29,
+    "verse": 12
   },
   {
     "book": "במדבר",
@@ -2355,7 +2339,7 @@
     "parsha": "מטות",
     "aliyah": 2,
     "chapter": 31,
-    "verse": 9
+    "verse": 1
   },
   {
     "book": "במדבר",
@@ -2364,23 +2348,23 @@
     "aliyah": 3,
     "aliyah2": 2,
     "chapter": 31,
-    "verse": 25
+    "verse": 13
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "מטות",
     "aliyah": 4,
-    "chapter": 32,
-    "verse": 1
+    "chapter": 31,
+    "verse": 25
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "מטות",
     "aliyah": 5,
-    "chapter": 32,
-    "verse": 20
+    "chapter": 31,
+    "verse": 42
   },
   {
     "book": "במדבר",
@@ -2389,7 +2373,7 @@
     "aliyah": 6,
     "aliyah2": 3,
     "chapter": 32,
-    "verse": 39
+    "verse": 1
   },
   {
     "book": "במדבר",
@@ -2398,7 +2382,7 @@
     "aliyah": 7,
     "aliyah2": 4,
     "chapter": 32,
-    "verse": 39
+    "verse": 20
   },
   {
     "book": "במדבר",
@@ -2414,7 +2398,7 @@
     "parsha": "מסעי",
     "aliyah": 2,
     "chapter": 33,
-    "verse": 50
+    "verse": 11
   },
   {
     "book": "במדבר",
@@ -2422,8 +2406,8 @@
     "parsha": "מסעי",
     "aliyah": 3,
     "aliyah2": 5,
-    "chapter": 34,
-    "verse": 16
+    "chapter": 33,
+    "verse": 50
   },
   {
     "book": "במדבר",
@@ -2431,15 +2415,15 @@
     "parsha": "מסעי",
     "aliyah": 4,
     "aliyah2": 6,
-    "chapter": 35,
-    "verse": 9
+    "chapter": 34,
+    "verse": 16
   },
   {
     "book": "במדבר",
     "booknum": 4,
     "parsha": "מסעי",
     "aliyah": 5,
-    "chapter": 36,
+    "chapter": 35,
     "verse": 1
   },
   {
@@ -2448,8 +2432,8 @@
     "parsha": "מסעי",
     "aliyah": 6,
     "aliyah2": 7,
-    "chapter": 36,
-    "verse": 5
+    "chapter": 35,
+    "verse": 9
   },
   {
     "book": "במדבר",
@@ -2457,7 +2441,7 @@
     "parsha": "מסעי",
     "aliyah": 7,
     "chapter": 36,
-    "verse": 10
+    "verse": 1
   },
   {
     "book": "דברים",
@@ -2473,7 +2457,7 @@
     "parsha": "דברים",
     "aliyah": 2,
     "chapter": 1,
-    "verse": 12
+    "verse": 11
   },
   {
     "book": "דברים",
@@ -2505,7 +2489,7 @@
     "parsha": "דברים",
     "aliyah": 6,
     "chapter": 2,
-    "verse": 30
+    "verse": 31
   },
   {
     "book": "דברים",
@@ -2513,7 +2497,7 @@
     "parsha": "דברים",
     "aliyah": 7,
     "chapter": 3,
-    "verse": 12
+    "verse": 15
   },
   {
     "book": "דברים",
@@ -2537,15 +2521,15 @@
     "parsha": "ואתחנן",
     "aliyah": 3,
     "chapter": 4,
-    "verse": 21
+    "verse": 41
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "ואתחנן",
     "aliyah": 4,
-    "chapter": 4,
-    "verse": 41
+    "chapter": 5,
+    "verse": 1
   },
   {
     "book": "דברים",
@@ -2553,23 +2537,23 @@
     "parsha": "ואתחנן",
     "aliyah": 5,
     "chapter": 5,
-    "verse": 4
-  },
-  {
-    "book": "דברים",
-    "booknum": 5,
-    "parsha": "ואתחנן",
-    "aliyah": 6,
-    "chapter": 5,
     "verse": 19
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "ואתחנן",
-    "aliyah": 7,
+    "aliyah": 6,
     "chapter": 6,
     "verse": 4
+  },
+  {
+    "book": "דברים",
+    "booknum": 5,
+    "parsha": "ואתחנן",
+    "aliyah": 7,
+    "chapter": 7,
+    "verse": 1
   },
   {
     "book": "דברים",
@@ -2641,7 +2625,7 @@
     "parsha": "ראה",
     "aliyah": 2,
     "chapter": 12,
-    "verse": 6
+    "verse": 11
   },
   {
     "book": "דברים",
@@ -2649,21 +2633,13 @@
     "parsha": "ראה",
     "aliyah": 3,
     "chapter": 12,
-    "verse": 20
+    "verse": 29
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "ראה",
     "aliyah": 4,
-    "chapter": 13,
-    "verse": 2
-  },
-  {
-    "book": "דברים",
-    "booknum": 5,
-    "parsha": "ראה",
-    "aliyah": 5,
     "chapter": 14,
     "verse": 1
   },
@@ -2671,7 +2647,7 @@
     "book": "דברים",
     "booknum": 5,
     "parsha": "ראה",
-    "aliyah": 6,
+    "aliyah": 5,
     "chapter": 14,
     "verse": 22
   },
@@ -2679,9 +2655,17 @@
     "book": "דברים",
     "booknum": 5,
     "parsha": "ראה",
+    "aliyah": 6,
+    "chapter": 15,
+    "verse": 1
+  },
+  {
+    "book": "דברים",
+    "booknum": 5,
+    "parsha": "ראה",
     "aliyah": 7,
     "chapter": 15,
-    "verse": 12
+    "verse": 19
   },
   {
     "book": "דברים",
@@ -2697,15 +2681,15 @@
     "parsha": "שופטים",
     "aliyah": 2,
     "chapter": 17,
-    "verse": 8
+    "verse": 14
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "שופטים",
     "aliyah": 3,
-    "chapter": 17,
-    "verse": 14
+    "chapter": 18,
+    "verse": 1
   },
   {
     "book": "דברים",
@@ -2713,14 +2697,14 @@
     "parsha": "שופטים",
     "aliyah": 4,
     "chapter": 18,
-    "verse": 14
+    "verse": 6
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "שופטים",
     "aliyah": 5,
-    "chapter": 19,
+    "chapter": 18,
     "verse": 14
   },
   {
@@ -2728,16 +2712,16 @@
     "booknum": 5,
     "parsha": "שופטים",
     "aliyah": 6,
-    "chapter": 20,
-    "verse": 2
+    "chapter": 19,
+    "verse": 14
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "שופטים",
     "aliyah": 7,
-    "chapter": 21,
-    "verse": 1
+    "chapter": 20,
+    "verse": 10
   },
   {
     "book": "דברים",
@@ -2752,8 +2736,8 @@
     "booknum": 5,
     "parsha": "כי תצא",
     "aliyah": 2,
-    "chapter": 22,
-    "verse": 1
+    "chapter": 21,
+    "verse": 22
   },
   {
     "book": "דברים",
@@ -2776,8 +2760,8 @@
     "booknum": 5,
     "parsha": "כי תצא",
     "aliyah": 5,
-    "chapter": 24,
-    "verse": 1
+    "chapter": 23,
+    "verse": 25
   },
   {
     "book": "דברים",
@@ -2792,8 +2776,8 @@
     "booknum": 5,
     "parsha": "כי תצא",
     "aliyah": 7,
-    "chapter": 25,
-    "verse": 4
+    "chapter": 24,
+    "verse": 14
   },
   {
     "book": "דברים",
@@ -2825,15 +2809,15 @@
     "parsha": "כי תבוא",
     "aliyah": 4,
     "chapter": 27,
-    "verse": 11
+    "verse": 1
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "כי תבוא",
     "aliyah": 5,
-    "chapter": 28,
-    "verse": 7
+    "chapter": 27,
+    "verse": 11
   },
   {
     "book": "דברים",
@@ -2841,15 +2825,15 @@
     "parsha": "כי תבוא",
     "aliyah": 6,
     "chapter": 28,
-    "verse": 21
+    "verse": 7
   },
   {
     "book": "דברים",
     "booknum": 5,
     "parsha": "כי תבוא",
     "aliyah": 7,
-    "chapter": 28,
-    "verse": 45
+    "chapter": 29,
+    "verse": 1
   },
   {
     "book": "דברים",
@@ -2899,7 +2883,7 @@
     "parsha": "נצבים",
     "aliyah": 6,
     "chapter": 30,
-    "verse": 15
+    "verse": 11
   },
   {
     "book": "דברים",
@@ -2941,7 +2925,7 @@
     "parsha": "וילך",
     "aliyah": 4,
     "chapter": 31,
-    "verse": 14
+    "verse": 10
   },
   {
     "book": "דברים",
@@ -2950,7 +2934,7 @@
     "aliyah": 5,
     "aliyah2": 6,
     "chapter": 31,
-    "verse": 20
+    "verse": 14
   },
   {
     "book": "דברים",
@@ -2959,7 +2943,7 @@
     "aliyah": 6,
     "aliyah2": 7,
     "chapter": 31,
-    "verse": 27
+    "verse": 20
   },
   {
     "book": "דברים",
@@ -2967,7 +2951,7 @@
     "parsha": "וילך",
     "aliyah": 7,
     "chapter": 31,
-    "verse": 27
+    "verse": 25
   },
   {
     "book": "דברים",
@@ -3015,7 +2999,7 @@
     "parsha": "האזינו",
     "aliyah": 6,
     "chapter": 32,
-    "verse": 39
+    "verse": 40
   },
   {
     "book": "דברים",
@@ -3047,7 +3031,7 @@
     "parsha": "וזאת הברכה",
     "aliyah": 3,
     "chapter": 33,
-    "verse": 12
+    "verse": 13
   },
   {
     "book": "דברים",
@@ -3070,8 +3054,8 @@
     "booknum": 5,
     "parsha": "וזאת הברכה",
     "aliyah": 6,
-    "chapter": 34,
-    "verse": 1
+    "chapter": 33,
+    "verse": 27
   },
   {
     "book": "דברים",
@@ -3079,6 +3063,6 @@
     "parsha": "וזאת הברכה",
     "aliyah": 7,
     "chapter": 34,
-    "verse": 7
+    "verse": 1
   }
 ]
