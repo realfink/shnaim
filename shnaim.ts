@@ -6,18 +6,15 @@ import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const outputFilePath = path.join(__dirname, "אחד מקרא אחד תרגום.html");
-const Books = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"];
-const bookTitles = ["בראשית", "שמות", "ויקרא", "במדבר", "דברים"];
+const OutputFileName = "אחד מקרא אחד תרגום.html"
+const OutputFileDir = path.join(__dirname, "out");
+const OutputFilePath = path.join(__dirname, "out", OutputFileName);
+const BookTitlesEnglish = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"];
+const BookTitlesHebrew = ["בראשית", "שמות", "ויקרא", "במדבר", "דברים"];
 const AliyotNames = ["", "ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שביעי", "מפטיר"];
-const parshiot = [
-  ["בראשית", "נח", "לך לך", "וירא", "חיי שרה", "תולדות", "ויצא", "וישלח", "וישב", "מקץ", "ויחי"],
-  ["שמות", "וארא", "בא", "בשלח", "יתרו", "משפטים", "תרומה", "תצוה", "כי תשא", "ויקהל", "פקודי"],
-  ["ויקרא", "צו", "שמיני", "תזריע", "מצורע", "אחרי מות", "קדושים", "אמור", "בהר", "בחוקותי"],
-  ["במדבר", "נשא", "בהעלותך", "שלח", "קרח", "קרח", "חוקת", "בלק", "פנחס", "מטות", "מסעי"],
-  ["דברים", "ואתחנן", "עקב", "ראה", "שופטים", "כי תצא", "כי תבוא", "ניצבים", "וילך", "האזינו", "וזאת הברכה"]
-];
-var aliyot: Aliyah[] = [];
+
+var parshiot: string[][] = readParshiot();
+var aliyot: Aliyah[] = readAliyot();
 
 type Chapter = string[];
 type Book = {
@@ -62,6 +59,10 @@ function readAliyot(): any {
   return readJSON("aliyot.json");
 }
 
+function readParshiot(): any {
+  return readJSON("parshiot.json");
+}
+
 function getAliyah(booknum: number, chapter: number, verse: number): Aliyah | null {
   return aliyot.find((aliyah) => aliyah.booknum === booknum + 1 && aliyah.chapter === chapter + 1 && aliyah.verse === verse + 1) || null;
 }
@@ -88,7 +89,7 @@ function printVerse(verseIndex: number, chumashVerse: string, onkelosVerse: stri
   print(`<span class="verse">`);
   print(`<span class="verse-number">${gematriya(verseIndex + 1)}.</span>`);
   print(`<span class="chumash">${chumashSplit ? chumashSplit[1] : ""}</span>`);
-  print(`<span class="onkelos">${onkelosVerse}</span>`);
+  print(`<span class="onkelos">[${onkelosVerse}]</span>`);
   if (chumashSplit && chumashSplit[2])
     print(`<span class="chumash-trail">${chumashSplit[2]}</span>`);
   print(`</span>`);
@@ -104,6 +105,7 @@ function printChapter(booknum: number, chapterIndex: number, chumashChapter: Cha
     printVerse(verseIndex, chumashVerse, onkelosVerse);
   });
 }
+
 function printBook(title: string, booknum: number, chumashChapters: Chapter[], onkelosChapters: Chapter[]): void {
   print(`<h1 id="book.${title}">${title}</h1>`);
   parshiot[booknum].forEach((parshaname) => {
@@ -115,12 +117,20 @@ function printBook(title: string, booknum: number, chumashChapters: Chapter[], o
   })
 }
 
-function print(content: string): void {
-  fs.writeFileSync(outputFilePath, content + "\n", { flag: 'a' });
+function print(content: string, first?: boolean): void {
+  if (first)
+    try {
+      fs.mkdirSync(OutputFileDir);
+    } catch (err) {
+      if (err.code !== 'EEXIST') {
+        throw err;
+      }
+    };
+
+  fs.writeFileSync(OutputFilePath, content + "\n", first ? {} : { flag: 'a' });
 }
 
-aliyot = readAliyot();
-print('<!DOCTYPE html>');
+print('<!DOCTYPE html>', true);
 print('<html>');
 print('<head>');
 print('<title>אחד מקרא אחד תרגום</title>');
@@ -130,7 +140,7 @@ print('</style>');
 print('</head>');
 print('<body>');
 print(`<div dir="rtl" lang="he">`);
-const books = Books.map((book, index) => readBook(book, bookTitles[index]));
+const books = BookTitlesEnglish.map((book, index) => readBook(book, BookTitlesHebrew[index]));
 books.forEach((book) => {
   print(`<a href="#book.${book.title}">${book.title}</a>`);
 })
