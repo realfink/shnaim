@@ -11,7 +11,7 @@ const OutputFileDir = path.join(__dirname, "out");
 const OutputFilePath = path.join(__dirname, "out", OutputFileName);
 const BookTitlesEnglish = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"];
 const BookTitlesHebrew = ["בראשית", "שמות", "ויקרא", "במדבר", "דברים"];
-const AliyotNames = ["", "ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שביעי", "מפטיר"];
+const AliyotNames = ["", "ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שביעי"];
 
 var parshiot: string[][] = readParshiot();
 var aliyot: Aliyah[] = readAliyot();
@@ -71,8 +71,8 @@ function printParsha(booknum: number, chapter: number, verse: number): void {
   const aliyah = getAliyah(booknum, chapter, verse);
   if (aliyah?.aliyah === 1) {
     print(`<h2 id="parsha.${aliyah.parsha}">${aliyah.parsha}</h2>`);
-    AliyotNames.forEach( (aliyahName, aliyahIndex) => {
-        aliyahIndex <= 7 && print(`<a href="#aliyah.${aliyah.parsha}.${aliyahIndex}">${aliyahName}</a>`);
+    AliyotNames.forEach((aliyahName, aliyahIndex) => {
+      aliyahIndex <= 7 && print(`<a href="#aliyah.${aliyah.parsha}.${aliyahIndex}">${aliyahName}</a>`);
     });
   }
 }
@@ -118,14 +118,14 @@ function printBook(title: string, booknum: number, chumashChapters: Chapter[], o
 }
 
 function print(content: string, first?: boolean): void {
-  if (first)
+  if (first) {
     try {
       fs.mkdirSync(OutputFileDir);
     } catch (err) {
-      if (err.code !== 'EEXIST') {
+      if (err.code !== 'EEXIST')
         throw err;
-      }
     };
+  };
 
   fs.writeFileSync(OutputFilePath, content + "\n", first ? {} : { flag: 'a' });
 }
