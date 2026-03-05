@@ -1,4 +1,4 @@
-#Achad Mikra Achad Targum
+# Achad Mikra Achad Targum
 
 I started doing שניים מקרא שניים תרגום during the preceding week. On Shabbat afternoon, I read the next parsha, and during the week, I do אחד מקרא אחד תרגום. Since I couldn't find any printed books that provide what I do, I created this file to allow me to do it with my Kindle.
 
