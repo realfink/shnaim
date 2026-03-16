@@ -158,28 +158,29 @@ function print(outputfilepath: string, content: string, first?: boolean): void {
 
 function printHtmlFile(perush: Perush): void {
 
-  const outputFilePath = path.join(OutputFileDir, perush.outputfilename + ".html");
+  const outputfilepath = path.join(OutputFileDir, perush.outputfilename + ".html");
 
-  print(outputFilePath, '<!DOCTYPE html>', true);
-  print(outputFilePath, '<html>');
-  print(outputFilePath, '<head>');
-  print(outputFilePath, `<title>${perush.outputfilename}</title>`);
-  print(outputFilePath, '<style>');
-  print(outputFilePath, fs.readFileSync(path.join(__dirname, "src", "styles.css"), "utf-8"));
-  print(outputFilePath, '</style>');
-  print(outputFilePath, '</head>');
-  print(outputFilePath, '<body>');
-  print(outputFilePath, `<div dir="rtl" lang="he">`);
+  print(outputfilepath, '<!DOCTYPE html>', true);
+  print(outputfilepath, '<html>');
+  print(outputfilepath, '<head>');
+  print(outputfilepath, `<title>${perush.outputfilename}</title>`);
+  print(outputfilepath, '<style>');
+  print(outputfilepath, fs.readFileSync(path.join(__dirname, "src", "styles.css"), "utf-8"));
+  print(outputfilepath, '</style>');
+  print(outputfilepath, '</head>');
+  print(outputfilepath, '<body>');
+  print(outputfilepath, `<div dir="rtl" lang="he">`);
+  print(outputfilepath, `<h1 id="top">${perush.outputfilename}</h1>`);
   const books = BookTitlesEnglish.map((book, index) => readBook(perush, book, BookTitlesHebrew[index]));
   books.forEach((book) => {
-    print(outputFilePath, `<a href="#book.${book.title}">${book.title}</a>`);
+    print(outputfilepath, `<a href="#book.${book.title}">${book.title}</a>`);
   })
   books.forEach((book, bookindex) => {
-    printBook(outputFilePath, book.title, bookindex, book.chumashtext, book.perushtext);
+    printBook(outputfilepath, book.title, bookindex, book.chumashtext, book.perushtext);
   })
-  print(outputFilePath, `</div>`);
-  print(outputFilePath, '</body>');
-  print(outputFilePath, '</html>');
+  print(outputfilepath, `</div>`);
+  print(outputfilepath, '</body>');
+  print(outputfilepath, '</html>');
 }
 
 Perushim.forEach((perush) => {
