@@ -3,6 +3,7 @@ import * as path from "path";
 import gematriya from "gematriya";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { exit } from "process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,7 +21,7 @@ type Chapter = string[];
 type Book = {
   title: string;
   chumash: Chapter[];
-  onkelos: Chapter[];
+  perush: Chapter[];
 }
 
 type Aliyah = {
@@ -33,10 +34,29 @@ type Aliyah = {
   verse: number;
 }
 
-function readBook(book: string, title: string): Book {
-  const chumash = readChumash(book);
-  const onkelos = readOnkelos(book);
-  return { title, chumash, onkelos };
+type Perush = {
+  perushname: string;
+  inputfilename: (bookname: string) => string;
+  outputfilename: string;
+}
+
+const perushim = [
+  {
+    perushname: "Onkelos",
+    inputfilename: (bookname: string) => `Onkelos ${bookname} - he - Onkelos ${bookname}.json`,
+    outputfilename: "אחד מקרא אחד תרגום.html"
+  },
+  {
+    perushname: "Rashi",
+    inputfilename: (bookname: string) => `Rashi on ${bookname} - he - Rashi Chumash, Metsudah Publications, 2009.json`,
+    outputfilename: 'אחד מקרא אחד רש״י.html'
+  }
+];
+
+function readBook(bookname: string, title: string): Book {
+  const chumash = readChumash(bookname);
+  const perush = readPerush(perushim[0], bookname); // Assuming Onkelos is the first perush
+  return { title, chumash, perush };
 }
 
 function readJSON(filename: string): any {
@@ -45,14 +65,14 @@ function readJSON(filename: string): any {
   return JSON.parse(fileContent);
 }
 
-function readChumash(title: string): any {
-  const filename = `${title} - he - Miqra according to the Masorah.json`;
+function readChumash(bookname: string): any {
+  const filename = `${bookname} - he - Miqra according to the Masorah.json`;
   return readJSON(filename).text;
 }
 
-function readOnkelos(title: string): Chapter[] {
-  const filename = `Onkelos_${title}.json`;
-  return readJSON(filename).versions[0].text;
+function readPerush(perush: Perush, bookname: string): Chapter[] {
+  const filename = perush.inputfilename(bookname);
+  return readJSON(filename).text;
 }
 
 function readAliyot(): any {
@@ -83,37 +103,37 @@ function printAliyah(booknum: number, chapter: number, verse: number): void {
     print(`<h3 id="aliyah.${aliyah.parsha}.${aliyah.aliyah}">${AliyotNames[aliyah.aliyah]}${aliyah.aliyah2 ? " (" + AliyotNames[aliyah.aliyah2] + ")" : ""}</h3>`);
 }
 
-function printVerse(verseIndex: number, chumashVerse: string, onkelosVerse: string): void {
+function printVerse(verseIndex: number, chumashVerse: string, perushVerse: string): void {
   const chumashSplit = chumashVerse.match(/^([\s\S]*?)(&nbsp;.*$|$)/);
 
   print(`<span class="verse">`);
   print(`<span class="verse-number">${gematriya(verseIndex + 1)}.</span>`);
   print(`<span class="chumash">${chumashSplit ? chumashSplit[1] : ""}</span>`);
-  print(`<span class="onkelos">[${onkelosVerse}]</span>`);
+  print(`<span class="perush">[${perushVerse}]</span>`);
   if (chumashSplit && chumashSplit[2])
     print(`<span class="chumash-trail">${chumashSplit[2]}</span>`);
   print(`</span>`);
 }
 
-function printChapter(booknum: number, chapterIndex: number, chumashChapter: Chapter, onkelosChapter: Chapter): void {
+function printChapter(booknum: number, chapterIndex: number, chumashChapter: Chapter, perushChapter: Chapter): void {
   chumashChapter.forEach((chumashVerse, verseIndex) => {
     printParsha(booknum, chapterIndex, verseIndex);
     printAliyah(booknum, chapterIndex, verseIndex);
     if (verseIndex === 0)
       print(`<span class="chapter">[פרק ${gematriya(chapterIndex + 1)}]</span>`);
-    var onkelosVerse = onkelosChapter[verseIndex];
-    printVerse(verseIndex, chumashVerse, onkelosVerse);
+    var perushVerse = perushChapter[verseIndex];
+    printVerse(verseIndex, chumashVerse, perushVerse);
   });
 }
 
-function printBook(title: string, booknum: number, chumashChapters: Chapter[], onkelosChapters: Chapter[]): void {
+function printBook(title: string, booknum: number, chumashChapters: Chapter[], perushChapters: Chapter[]): void {
   print(`<h1 id="book.${title}">${title}</h1>`);
   parshiot[booknum].forEach((parshaname) => {
     print(`<a href="#parsha.${parshaname}">${parshaname}</a>`);
   })
   chumashChapters.forEach((chumashChapter, chapterIndex) => {
-    var onkelosChapter = onkelosChapters[chapterIndex];
-    printChapter(booknum, chapterIndex, chumashChapter, onkelosChapter);
+    var perushChapter = perushChapters[chapterIndex];
+    printChapter(booknum, chapterIndex, chumashChapter, perushChapter);
   })
 }
 
@@ -122,7 +142,7 @@ function print(content: string, first?: boolean): void {
     try {
       fs.mkdirSync(OutputFileDir);
     } catch (err) {
-      if (err.code !== 'EEXIST')
+      if ((err as NodeJS.ErrnoException).code !== 'EEXIST')
         throw err;
     };
   };
@@ -145,7 +165,7 @@ books.forEach((book) => {
   print(`<a href="#book.${book.title}">${book.title}</a>`);
 })
 books.forEach((book, bookindex) => {
-  printBook(book.title, bookindex, book.chumash, book.onkelos);
+  printBook(book.title, bookindex, book.chumash, book.perush);
 })
 print(`</div>`);
 print('</body>');
