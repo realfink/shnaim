@@ -108,14 +108,15 @@ function printVerse(outputfilepath: string, verseIndex: number, chumashVerse: st
   print(outputfilepath, `<span class="verse">`);
   print(outputfilepath, `<span class="verse-number">${gematriya(verseIndex + 1)}.</span>`);
   print(outputfilepath, `<span class="chumash">${chumashSplit ? chumashSplit[1] : ""}</span>`);
-  if (Array.isArray(perushVerse) && perushVerse.length > 0) {
-    print(outputfilepath, `<span class="perush">[`);
-    for (const perushPart of perushVerse)
-      print(outputfilepath, perushPart);
-    print(outputfilepath, `]</span>`);
+  if (perushVerse && perushVerse.length > 0) {
+    if (Array.isArray(perushVerse)) {
+      print(outputfilepath, `<span class="perush">[`);
+      for (const perushPart of perushVerse)
+        print(outputfilepath, perushPart);
+      print(outputfilepath, `]</span>`);
+    }
+    else print(outputfilepath, `<span class="perush">[${perushVerse}]</span>`);
   }
-  else
-    print(outputfilepath, `<span class="perush">[${perushVerse}]</span>`);
   if (chumashSplit && chumashSplit[2])
     print(outputfilepath, `<span class="chumash-trail">${chumashSplit[2]}</span>`);
   print(outputfilepath, `</span>`);
@@ -160,17 +161,19 @@ function printHtmlFile(perush: Perush): void {
 
   const outputfilepath = path.join(OutputFileDir, perush.outputfilename + ".html");
 
-  print(outputfilepath, '<!DOCTYPE html>', true);
-  print(outputfilepath, '<html>');
-  print(outputfilepath, '<head>');
-  print(outputfilepath, `<title>${perush.outputfilename}</title>`);
-  print(outputfilepath, '<style>');
+  print(outputfilepath,
+    `<!DOCTYPE html>
+<html>
+<head>
+<title>${perush.outputfilename}</title>
+<style>`, true);
   print(outputfilepath, fs.readFileSync(path.join(__dirname, "src", "styles.css"), "utf-8"));
-  print(outputfilepath, '</style>');
-  print(outputfilepath, '</head>');
-  print(outputfilepath, '<body>');
-  print(outputfilepath, `<div dir="rtl" lang="he">`);
-  print(outputfilepath, `<h1 id="top">${perush.outputfilename}</h1>`);
+  print(outputfilepath,
+    `</style>
+</head>
+<body>
+<div dir="rtl" lang="he">
+<h1 id="top">${perush.outputfilename}</h1>`);
   const books = BookTitlesEnglish.map((book, index) => readBook(perush, book, BookTitlesHebrew[index]));
   books.forEach((book) => {
     print(outputfilepath, `<a href="#book.${book.title}">${book.title}</a>`);
@@ -178,9 +181,10 @@ function printHtmlFile(perush: Perush): void {
   books.forEach((book, bookindex) => {
     printBook(outputfilepath, book.title, bookindex, book.chumashtext, book.perushtext);
   })
-  print(outputfilepath, `</div>`);
-  print(outputfilepath, '</body>');
-  print(outputfilepath, '</html>');
+  print(outputfilepath,
+    `</div>
+</body>
+</html>`);
 }
 
 Perushim.forEach((perush) => {
