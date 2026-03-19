@@ -47,7 +47,7 @@ const Perushim: Perush[] = [
   },
   {
     perushname: "Rashi",
-    inputfilename: (bookname: string) => `Rashi on ${bookname} - he - Rashi Chumash, Metsudah Publications, 2009.json`,
+    inputfilename: (bookname: string) => `Rashi on ${bookname} - he - merged.json`,
     outputfilename: 'אחד מקרא אחד רש״י'
   }
 ];
